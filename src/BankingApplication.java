@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static com.sun.tools.doclint.Entity.or;
+
 public class BankingApplication {
 
     public static void main(String[] args) {
@@ -17,7 +19,6 @@ public class BankingApplication {
     }
 
 }
-
 
 class BankAccount {
     int balance;
@@ -57,8 +58,7 @@ class BankAccount {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome " + customerName);
-        System.out.println("Your ID is " + customerId);
-        System.out.println("\n");
+        System.out.println("Your ID is " + customerId + "\n");
         System.out.println("A. Check Balance");
         System.out.println("B. Deposit");
         System.out.println("C. Withdraw");
@@ -74,12 +74,14 @@ class BankAccount {
 
             switch (option) {
                 case 'A':
+                case 'a':
                     System.out.println("---------------------");
                     System.out.println("Balance : " + balance);
                     System.out.println("---------------------");
                     System.out.println("\n");
                     break;
                 case 'B':
+                case 'a':
                     System.out.println("---------------------");
                     System.out.println("Enter a deposit amount:");
                     System.out.println("---------------------");
@@ -88,6 +90,7 @@ class BankAccount {
                     System.out.println("\n");
                     break;
                 case 'C':
+                case 'a':
                     System.out.println("---------------------");
                     System.out.println("Enter a withdrawal amount:");
                     System.out.println("---------------------");
@@ -96,19 +99,20 @@ class BankAccount {
                     System.out.println("\n");
                     break;
                 case 'D':
+                case 'a':
                     System.out.println("---------------------");
                     getPreviousTransaction();
                     System.out.println("---------------------");
                     System.out.println("\n");
                     break;
                 case 'E':
+                case 'a':
                     System.out.println("****************************");
                     break;
-
                 default:
-                    System.out.println("Invalid option. PLease try again.");
+                    System.out.println("Invalid option. Please try again.");
             }
-            } while (option != 'E');
+            } while (option != 'E' || option != 'e');
         System.out.println("Thanks for stopping by!");
     }
 }
