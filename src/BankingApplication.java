@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import static com.sun.tools.doclint.Entity.or;
-
 public class BankingApplication {
 
     public static void main(String[] args) {
@@ -81,7 +79,7 @@ class BankAccount {
                     System.out.println("\n");
                     break;
                 case 'B':
-                case 'a':
+                case 'b':
                     System.out.println("---------------------");
                     System.out.println("Enter a deposit amount:");
                     System.out.println("---------------------");
@@ -90,7 +88,7 @@ class BankAccount {
                     System.out.println("\n");
                     break;
                 case 'C':
-                case 'a':
+                case 'c':
                     System.out.println("---------------------");
                     System.out.println("Enter a withdrawal amount:");
                     System.out.println("---------------------");
@@ -99,14 +97,14 @@ class BankAccount {
                     System.out.println("\n");
                     break;
                 case 'D':
-                case 'a':
+                case 'd':
                     System.out.println("---------------------");
                     getPreviousTransaction();
                     System.out.println("---------------------");
                     System.out.println("\n");
                     break;
                 case 'E':
-                case 'a':
+                case 'e':
                     System.out.println("****************************");
                     break;
                 default:
